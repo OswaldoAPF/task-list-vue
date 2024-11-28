@@ -10,7 +10,7 @@ A simple yet elegant task manager application built with **Vue.js**. This app al
 - **Responsive**: The app is fully responsive and optimized for both desktop and mobile devices.
 
 ## URL 🌼
-To interact with the web platform, please access: <a href="https://oswaldo-pereira.netlify.app/" target="_blank">🚀Portfolio </a>
+To interact with the web platform, please access: <a href="https://task-list-vue-oswaldoapf.netlify.app/" target="_blank">🚀 Task List App</a>
 
 ## 💻 Tech Stack
 

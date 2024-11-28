@@ -7,12 +7,25 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import ListaTareas from './components/ListaTareas.vue';
 import './assets/main.css';
 
 const nuevaTareaTexto = ref('');
 const tareas = ref([]);
+
+const loadTasks = () => {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  return tasks;
+};
+
+const saveTasks = (tasks) => {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+};
+
+onMounted(() => {
+  tareas.value = loadTasks();  
+});
 
 const agregarTarea = () => {
   if (nuevaTareaTexto.value.trim()) {
@@ -21,18 +34,21 @@ const agregarTarea = () => {
       texto: nuevaTareaTexto.value,
       completada: false,
     });
+    saveTasks(tareas.value);
     nuevaTareaTexto.value = '';
   }
 };
 
 const eliminarTarea = (id) => {
   tareas.value = tareas.value.filter((tarea) => tarea.id !== id);
+  saveTasks(tareas.value);
 };
 
 const actualizarTarea = (id) => {
   const tarea = tareas.value.find((tarea) => tarea.id === id);
   if (tarea) {
     tarea.completada = !tarea.completada;
+    saveTasks(tareas.value);
   }
 };
 </script>

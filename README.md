@@ -1,41 +1,16 @@
-# ./
+# Task Manager App - Vue.js
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple yet elegant task manager application built with **Vue.js**. This app allows users to create, mark, and remove tasks with ease. It features a beautiful dark theme and stores the state of tasks using **localStorage** so that users' progress is saved even after page reloads.
 
-## Recommended IDE Setup
+## 🚀 Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Task Management**: Add, remove, and toggle tasks between completed and incomplete states.
+- **Persistence**: Tasks are saved in the browser's **localStorage**, ensuring they remain available after reloading the page.
+- **Dark Theme**: Professional and attractive dark UI with green accents for checkboxes and buttons.
+- **Responsive**: The app is fully responsive and optimized for both desktop and mobile devices.
 
-## Customize configuration
+## 💻 Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- **Vue.js 3** (Composition API)
+- **LocalStorage** for persistent data
+- **CSS** (with custom styles and transitions)

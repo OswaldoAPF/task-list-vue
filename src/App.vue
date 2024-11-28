@@ -1,5 +1,4 @@
 <template>
-  <title>Task List App - Vue.js</title>
   <div class="container">
     <h1>Task List</h1>
     <input type="text" v-model="nuevaTareaTexto" @keyup.enter="agregarTarea" placeholder="Add Task" />

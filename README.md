@@ -9,6 +9,9 @@ A simple yet elegant task manager application built with **Vue.js**. This app al
 - **Dark Theme**: Professional and attractive dark UI with green accents for checkboxes and buttons.
 - **Responsive**: The app is fully responsive and optimized for both desktop and mobile devices.
 
+## URL 🌼
+To interact with the web platform, please access: <a href="https://oswaldo-pereira.netlify.app/" target="_blank">🚀Portfolio </a>
+
 ## 💻 Tech Stack
 
 ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)

@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <input v-model="nuevaTareaTexto" @keyup.enter="agregarTarea" placeholder="Agregar tarea" />
+  <div class="container">
+    <h1>Task List</h1>
+    <input type="text" v-model="nuevaTareaTexto" @keyup.enter="agregarTarea" placeholder="Add Task" />
     <ListaTareas :tareas="tareas" @eliminarTarea="eliminarTarea" @actualizarCompletada="actualizarTarea" />
   </div>
 </template>
@@ -8,14 +9,11 @@
 <script setup>
 import { ref } from 'vue';
 import ListaTareas from './components/ListaTareas.vue';
+import './assets/main.css';
 
 const nuevaTareaTexto = ref('');
-const tareas = ref([
-  { id: 1, texto: 'Tarea 1', completada: false },
-  { id: 2, texto: 'Tarea 2', completada: false },
-]);
+const tareas = ref([]);
 
-// Agregar tarea nueva
 const agregarTarea = () => {
   if (nuevaTareaTexto.value.trim()) {
     tareas.value.push({
@@ -23,16 +21,14 @@ const agregarTarea = () => {
       texto: nuevaTareaTexto.value,
       completada: false,
     });
-    nuevaTareaTexto.value = ''; // Limpiar el input después de agregar la tarea
+    nuevaTareaTexto.value = '';
   }
 };
 
-// Eliminar tarea
 const eliminarTarea = (id) => {
   tareas.value = tareas.value.filter((tarea) => tarea.id !== id);
 };
 
-// Actualizar tarea (marcar como completada)
 const actualizarTarea = (id) => {
   const tarea = tareas.value.find((tarea) => tarea.id === id);
   if (tarea) {
@@ -40,10 +36,3 @@ const actualizarTarea = (id) => {
   }
 };
 </script>
-
-<style>
-h1 {
-  text-align: center;
-  color: #333;
-}
-</style>

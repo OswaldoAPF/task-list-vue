@@ -14,12 +14,10 @@
 import { defineProps, defineEmits } from 'vue';
 import TareaItem from './TareaItem.vue';
 
-// Recibir las tareas del componente padre
 const props = defineProps({
   tareas: Array,
 });
 
-// Emitir eventos hacia el padre
 const emit = defineEmits(['eliminarTarea', 'actualizarCompletada']);
 
 const eliminarTarea = (id) => {
